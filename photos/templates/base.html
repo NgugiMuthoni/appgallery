@@ -10,69 +10,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
   <style>
-    body {
-      font-family: "Lato", sans-serif;
-      background-image: url("https://bit.ly/2ZsB0HY");
-      background-repeat: no-repeat;
-      background-position: right top;
-      background-attachment: fixed;
-    }
 
-    h6 {
-      font-family: 'Cabin Sketch', cursive;
-      color: black;
-    }
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+  background-image: url('https://images.wallpaperscraft.com/image/bird_silhouette_vector_134154_3840x2400.jpg');
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
 
-    .sidenav {
-      height: 100%;
-      width: 160px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: black;
-      overflow-x: hidden;
-      padding-top: 20px;
-    }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
-    .sidenav a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-    }
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
-    .main {
-      margin-left: 160px;
-      /* Same as the width of the sidenav */
-      font-size: 28px;
-      /* Increased text to enable scrolling */
-      padding: 0px 10px;
-    }
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
-    @media screen and (max-height: 450px) {
-      .sidenav {
-        padding-top: 15px;
-      }
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
 
-      .sidenav a {
-        font-size: 18px;
-      }
-    }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
   </style>
 
 <body>
-
+<span style="margin-left: 1%;">{% include "navbar.html" %}</span>
   <div class="main">
-    <h1 style="text-align: center; color:white;font-family: 'Cabin Sketch', cursive;">Tambua Kenya</h1>
-    <div class="container">
-      {% include "navbar.html" %}
-      <div>
+    <h1 style="text-align: center; color:white;">Gallery</h1>
+    <div class="container-fluid">
+      <div id="main">
         {% block content %}
         {% endblock content %}
       </div>

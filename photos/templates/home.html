@@ -1,17 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<ul style="align-self: flex-end" class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Locations
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="{% url 'search_by_location' %}">Mombasa</a>
-        <a class="dropdown-item" href="{% url 'search_by_location' %}">Nakuru</a>
-        <a class="dropdown-item" href="{% url 'search_by_location' %}">Kisumu</a>
-    </div>
-</ul>
-<br>
+
 <div class="container-fluid display">
     <div class="row">
         {% for image in images %}

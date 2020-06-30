@@ -1,6 +1,7 @@
-<div class="sidenav">
+<div class="sidenav text-center text-monospace" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a class="nav-link text-white" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
-    <img src="https://bzfd.it/3eew2mq" alt="">
+    
 
    
     <form class="navbar-form" role="search" action="{% url 'search_results' %}" METHOD="GET">
@@ -15,5 +16,35 @@
 
     </form>
 
+    <h4>Locations</h4>
+        <div>
+            <a class="dropdown-item" href="{% url 'search_by_location' %}">Mombasa</a>
+            <a class="dropdown-item" href="{% url 'search_by_location' %}">Nakuru</a>
+            <a class="dropdown-item" href="{% url 'search_by_location' %}">Kisumu</a>
+        </div>
+
+
+        <footer style="margin-top: 199%;">
+            <p>copyright &copy; 2020</p>
+        </footer>
+    
   </div>
+  <span style="font-size:30px;cursor:pointer" class="text-light" onclick="openNav()">&#9776; open</span>
+  <br>
+  <script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+    </script>
+
+
+
   
