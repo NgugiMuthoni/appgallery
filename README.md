@@ -10,7 +10,7 @@
 This is an application that enables users to view different categories of images per locations and also able to copy the link and share it to other friends.
 
 ### Deployed link
-<a href=""> The link</a>
+<a href="https://sheltered-ocean-86900.herokuapp.com/"> The link</a>
 
 
 ### BDD
